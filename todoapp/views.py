@@ -22,3 +22,6 @@ def tareas(request):  # the index view
             nueva_tarea = Tarea(titulo=titulo, contenido=contenido, categoria=categoria)  # Crear la tarea
             nueva_tarea.save()  # guardar la tarea en la base de datos.
             return redirect("/tareas")  # recargar la página.
+
+def register_user(request):
+    return render(request,"todoapp/register_user.html")
